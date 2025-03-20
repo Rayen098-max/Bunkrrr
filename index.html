@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunkrr - Attendance Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bunkrr</h1>
+
+        <div class="input-section">
+            <label for="totalLectures">Total Lectures Conducted:</label>
+            <input type="number" id="totalLectures" min="1">
+
+            <label for="attendedLectures">Lectures Attended:</label>
+            <input type="number" id="attendedLectures" min="0">
+
+            <button onclick="calculateAttendance()">Calculate</button>
+        </div>
+
+        <div class="result-section" id="result">
+            <h2>Your Attendance: <span id="attendancePercent">--</span>%</h2>
+            <p id="attendanceQuote"></p>
+        </div>
+
+        <div class="button-container">
+            <button id="skipButton" onclick="showSkipChart()">If Skipped</button>
+            <button id="attendButton" onclick="showAttendChart()">If Attended</button>
+        </div>
+
+        <div class="chart-section" id="chartContainer">
+            <h2 id="chartTitle"></h2>
+            <table id="chartTable"></table>
+        </div>
+
+        <button id="refreshButton" onclick="resetApp()">Refresh</button>
+
+        <p class="footer">-Made with R.P</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
